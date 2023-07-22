@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link rel="icon" href="img/bookmark.png" />
+    <!-- STYLE SHEETS -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bookmark</title>
+  </head>
+  <body class="">
+    <!-- Main section -->
+    <div class="container mt-5 pt-5">
+      <div class="content">
+        <div class="row gy-4">
+          <div class="col-12">
+            <div class="heading text-center">
+              <h1>Bookmarker</h1>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="content B">
+              <div class="heading-2 text-center p-4">
+                <h2>
+                  <i class="fa-solid fa-bookmark"></i> Bookmark your favorite
+                  sites <i class="fa-solid fa-bookmark"></i>
+                </h2>
+              </div>
+              <div class="items fw-bolder">
+                <label for="site-name">
+                  <i class="fa-solid fa-book-bookmark pe-2 my-3"></i>Site
+                  Name</label
+                >
+                <div class="input-name position-relative">
+                  <input
+                    type="text"
+                    id="site-name"
+                    class="form-control mb-3 target"
+                    placeholder="Bookmark Name"
+                  />
+
+                  <i
+                    class="fa-solid fa-circle-exclamation warning-icon position-absolute"
+                  ></i>
+                  <i
+                    class="fa-solid fa-check accept-icon position-absolute"
+                  ></i>
+                </div>
+                <!-- <p id="site-name-section" class="text-danger">
+                  <i class="fa-solid fa-circle-arrow-right"></i> Site name must
+                  contain at least 3 characters
+                </p> -->
+
+                <label for="site-URL">
+                  <i class="fa-solid fa-link pe-2 my-2"></i>Site URL</label
+                >
+                <div class="input-name position-relative">
+                  <input
+                    type="text"
+                    id="site-URL"
+                    class="form-control target mb-3"
+                    placeholder="Website URL"
+                  />
+
+                  <i
+                    class="fa-solid fa-circle-exclamation warning-icon-2 position-absolute"
+                  ></i>
+                  <i
+                    class="fa-solid fa-check accept-icon-2 position-absolute"
+                  ></i>
+                </div>
+                <!-- <p id="url-name-section" class="text-danger">
+                  <i class="fa-solid fa-circle-arrow-right"></i> Site URL must
+                  be a valid one
+                </p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <button
+              class="btn btn-submit px-5 m-auto"
+              type="submit"
+              onclick="addItem()"
+            >
+              Submit
+            </button>
+          </div>
+          <div class="col-12">
+            <div class="content py-4 B">
+              <table class="table table-light table-border text-center">
+                <thead>
+                  <th>Index</th>
+                  <th>Website Name</th>
+                  <th>Visit</th>
+                  <th>Delete</th>
+                </thead>
+                <tbody id="demo"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="box-container"
+      class="position-absolute d-none align-items-center justify-content-center"
+    >
+      <div id="box-item" class="bg-white p-3 shadow-lg rounded-4">
+        <div class="heading-icon d-flex justify-content-between mb-4">
+          <div class="right">
+            <i class="fa-solid fa-circle text-success"></i>
+            <i class="fa-solid fa-circle text-warning"></i>
+            <i class="fa-solid fa-circle text-danger"></i>
+          </div>
+          <div class="left">
+            <i id="close-icon" class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="text_warning">
+          <p id="site-name-section">
+            <i class="fa-solid fa-circle-arrow-right text-danger"></i> Site name
+            must contain at least 3 characters
+          </p>
+          <p id="url-name-section">
+            <i class="fa-solid fa-circle-arrow-right text-danger"></i> Site URL
+            must be a valid one
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
